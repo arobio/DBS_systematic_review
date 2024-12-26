@@ -12,11 +12,11 @@ import os
 import datetime
 
 
-os.chdir(r"C:\Users\Adriano Reimer\Documents\sysrev\out5")
+os.chdir(r"")
 
 # Create a folder with the current date (YYYY-MM-DD format)
 current_date = datetime.date.today().strftime("%Y-%m-%d")
-output_folder = os.path.join(r"C:\Users\Adriano Reimer\Documents\sysrev\out5", current_date)
+output_folder = os.path.join(r"", current_date)
 
 # Create the output folder if it doesn't exist
 os.makedirs(output_folder, exist_ok=True)
@@ -24,7 +24,7 @@ os.makedirs(output_folder, exist_ok=True)
 # Function to search PubMed with the specified query
 def search(query):
     # Define the user email for Entrez
-    Entrez.email = 'adrianoreimer@gmail.com'
+    Entrez.email = ''
     # Use the Entrez esearch function to search PubMed
     handle = Entrez.esearch(db='pubmed',
                             sort='relevance',
@@ -37,7 +37,7 @@ def search(query):
 # Function to fetch the details for a list of PubMed IDs
 def fetch_details(id_list):
     ids = ','.join(id_list)
-    Entrez.email = 'adrianoreimer@gmail.com'
+    Entrez.email = ''
     handle = Entrez.efetch(db='pubmed',
                             retmode='xml',
                             id=ids)
