@@ -15,7 +15,7 @@ from IPython.display import display
 
 
 
-os.chdir(r"D:\pyscopus")
+os.chdir(r"")
 
 # Define the terms terms
 DBS_terms = ["deep brain stimulation", "DBS"]
@@ -23,7 +23,7 @@ Target = ["Striatum", "Striatal", "Striato", "Accumbens", "Subthalamic", "Subtha
 Limiter = ["Animal", "Animals", "Rodent", "Rodents", "Rat", "Rats", "Mouse", "Mice"]
 
 # Define the key for accessing Scopus API
-key = ["68071a43d56b85bd6929beb79bd1be83"]
+key = [""]
 
 # Set the key as an environment variable
 pybliometrics.scopus.utils.create_config(key)
